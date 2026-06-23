@@ -1,6 +1,6 @@
 *{
     margin:0;
-     padding:0;
+    padding:0;
     box-sizing:border-box;
     font-family:Segoe UI,sans-serif;
 }
@@ -92,9 +92,9 @@ nav a:hover{
     cursor:pointer;
 }
 
-.hero-image img{
+/* .hero-image img{
     width:500px;
-}
+} */
 
 .about{
     background:white;
@@ -104,9 +104,16 @@ nav a:hover{
     padding:80px 8%;
 }
 
-.about-image img{
+/* .about-image img{
     width:450px;
     border-radius:15px;
+} */
+
+
+.hero-image img,
+.about-image img{
+    max-width:100%;
+    height:auto;
 }
 
 .about-content{
@@ -234,17 +241,18 @@ footer{
     grid-template-columns:repeat(4,1fr);
     gap:30px;
 }
- 
 
- /* ==========================
-   TABLETS (992px and below)
-   ========================== */
-/* 
-@media screen and (max-width: 992px){
+
+/* =========================
+   MOBILE
+   0px - 480px
+========================= */
+
+@media screen and (max-width:480px){
 
     header{
         flex-direction:column;
-        gap:20px;
+        gap:15px;
         text-align:center;
     }
 
@@ -254,10 +262,13 @@ footer{
         justify-content:center;
     }
 
+    nav a{
+        margin:8px;
+    }
+
     .hero{
         flex-direction:column;
         text-align:center;
-        gap:50px;
     }
 
     .hero-text{
@@ -265,23 +276,16 @@ footer{
     }
 
     .hero-text h1{
-        font-size:55px;
+        font-size:40px;
     }
 
     .hero-text h2{
-        font-size:35px;
+        font-size:28px;
     }
 
     .hero-image img{
-        width:400px;
-        max-width:100%;
-    }
-
-    .hero-buttons{
-        display:flex;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:15px;
+        width:100%;
+        max-width:300px;
     }
 
     .about{
@@ -291,79 +295,6 @@ footer{
 
     .about-image img{
         width:100%;
-        max-width:500px;
-    }
-
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .service-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .project-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    footer{
-        grid-template-columns:repeat(2,1fr);
-        text-align:center;
-    }
-}
-
-/* ==========================
-   MOBILE DEVICES (768px)
-   ========================== */
-
-/* @media screen and (max-width: 768px){
-
-    header{
-        padding:20px;
-    }
-
-    nav{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    nav a{
-        display:block;
-        margin:5px 0;
-    }
-
-    .hero{
-        padding:50px 20px;
-    }
-
-    .hero-text h1{
-        font-size:42px;
-    }
-
-    .hero-text h2{
-        font-size:28px;
-    }
-
-    .desc{
-        font-size:15px;
-    }
-
-    .hero-buttons button{
-        width:100%;
-        margin:10px 0;
-    }
-
-    .social{
-        display:flex;
-        justify-content:center;
-    }
-
-    .about{
-        padding:50px 20px;
-    }
-
-    .about-content h2{
-        font-size:32px;
     }
 
     .stats{
@@ -376,17 +307,12 @@ footer{
 
     .project-grid{
         grid-template-columns:1fr;
-    }
-
-    .testimonial-box{
-        width:100%;
     }
 
     .cta{
         flex-direction:column;
         text-align:center;
         gap:20px;
-        padding:30px 20px;
     }
 
     footer{
@@ -395,40 +321,108 @@ footer{
     }
 }
 
-/* ==========================
-   SMALL MOBILE DEVICES
-   ========================== */
-/*
-@media screen and (max-width: 480px){
 
-    .hero-text h1{
-        font-size:34px;
+
+
+/* =========================
+   TABLET
+   481px - 768px
+========================= */
+
+@media screen and (min-width:481px) and (max-width:768px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .hero-text h2{
-        font-size:24px;
-    }
-
-    .about-content h2{
-        font-size:26px;
-    }
-
-    .cv-btn{
+    .hero-text{
         width:100%;
     }
 
     .hero-image img{
+        width:400px;
+    }
+
+    .about{
+        flex-direction:column;
+    }
+
+    .about-image img{
         width:100%;
     }
 
-    .service-card,
-    .project-card,
-    .card{
-        padding:15px;
+    .stats{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .cta button{
-        width:100%;
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
     }
-}  */
 
+    .project-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    footer{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+/* =========================
+   LAPTOP
+   769px - 1024px
+========================= */
+
+@media screen and (min-width:769px) and (max-width:1024px){
+
+    .hero-text h1{
+        font-size:55px;
+    }
+
+    .hero-image img{
+        width:400px;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .project-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    footer{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+/* =========================
+   DESKTOP
+   1025px+
+========================= */
+
+@media screen and (min-width:1025px){
+
+    .service-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .project-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .stats{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    footer{
+        grid-template-columns:repeat(4,1fr);
+    }
+}
