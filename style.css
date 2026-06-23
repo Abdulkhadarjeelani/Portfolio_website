@@ -96,6 +96,12 @@ nav a:hover{
     width:500px;
 } */
 
+
+/* .about-image img{
+    width:450px;
+    border-radius:15px;
+} */
+
 .about{
     background:white;
     color:black;
@@ -104,16 +110,12 @@ nav a:hover{
     padding:80px 8%;
 }
 
-/* .about-image img{
-    width:450px;
-    border-radius:15px;
-} */
-
 
 .hero-image img,
 .about-image img{
     max-width:100%;
     height:auto;
+    border-radius:15px;
 }
 
 .about-content{
@@ -246,7 +248,7 @@ footer{
 /* =========================
    MOBILE
    0px - 480px
-========================= */
+ */
 
 @media screen and (max-width:480px){
 
